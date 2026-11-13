@@ -32,4 +32,4 @@ git add . && CommitGen
 
 ### Contributing
 
-Bug reports, ideas and pull requests are welcome. Open an issue on the project's repo, or read its `CONTRIBUTING.md` before sending a change.
+Bug reports, ideas and pull requests are welcome. Open an issue or pull request on the project's repo.
