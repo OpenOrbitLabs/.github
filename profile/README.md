@@ -1,6 +1,6 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" /><img src="./assets/banner-dark.svg" width="100%" alt="OpenOrbit: Small, open-source tools for developers and creators." /></picture>
 
-OpenOrbit builds small, focused open-source tools for developers and creators. Each project solves one job well, ships with a CLI or simple UI, and is free to use and improve.
+OpenOrbit makes small, focused, open-source tools that take repetitive work off your plate. Each one runs locally, does one job well and is MIT licensed.
 
 <br />
 
@@ -11,4 +11,25 @@ OpenOrbit builds small, focused open-source tools for developers and creators. E
   <a href="https://github.com/OpenOrbitLabs/CommitGen"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/project-commitgen-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/project-commitgen-light.svg" /><img src="./assets/project-commitgen-dark.svg" width="49%" alt="CommitGen" /></picture></a>
 </p>
 
-Issues, ideas and pull requests are welcome on any project.
+| | What it does | Built with |
+|---|---|---|
+| **[Vedit](https://github.com/OpenOrbitLabs/Vedit)** | Turns raw talking-head footage into a finished video: cuts pauses, filler words and bad takes, adds animated captions, reframes for Shorts, TikTok and Reels, balances audio and makes thumbnails. Runs as a CLI or a Claude Code skill. | Python, FFmpeg, Whisper |
+| **[CommitGen](https://github.com/OpenOrbitLabs/CommitGen)** | Writes commit messages from your staged diff. Runs on a local model through Ollama by default, works with any OpenAI-compatible API, and masks secrets before anything is sent. | Go |
+
+### Try them
+
+```bash
+# Vedit: raw recording in, platform-ready video out (needs FFmpeg)
+git clone https://github.com/OpenOrbitLabs/Vedit.git && cd Vedit && pip install -e ".[all]"
+vedit auto raw.mp4 --preset youtube --formats 9:16 --thumbs
+```
+
+```bash
+# CommitGen: AI commit message for what you staged (needs Go 1.22+)
+go install github.com/onetwothird/CommitGen@latest
+git add . && CommitGen
+```
+
+### Contributing
+
+Bug reports, ideas and pull requests are welcome. Open an issue on the project's repo, or read its `CONTRIBUTING.md` before sending a change.
